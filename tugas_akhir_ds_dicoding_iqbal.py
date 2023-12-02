@@ -2,7 +2,7 @@
 
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import matplotlib as plt
 import seaborn as sns
 
 product_df = pd.read_csv('products_dataset.csv')
