@@ -6,13 +6,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 product_df = pd.read_csv('products_dataset.csv')
-product_df.describe()
-product_df.info()
-product_df.isna().sum()
-print("Jumlah duplikasi: ",product_df.duplicated().sum())
-product_df[product_df.product_category_name.isna()]
 product_df.dropna(axis=0, inplace=True)
-product_df.info()
+
 product_df.isna().sum()
 
 products_up_df = product_df.groupby(by="product_category_name").product_id.nunique().sort_values(ascending=False)
